@@ -14,18 +14,26 @@ The installation is divided in the following sections:
 
 Create the `root` partition:
 
-    (parted) mkpart primary ext4 **start** **end**
-    (parted) name **x** "Arch Linux"
+```
+(parted) mkpart primary ext4 **start** **end**
+(parted) name **x** "Arch Linux"
+```
 
-    # mkfs.ext4 /dev/sda**x**
+```
+# mkfs.ext4 /dev/sda**x**
+```
 
 Create and activate the `swap` partition:
 
-    (parted) mkpart primary linux-swap **start** **end**
-    (parted) name **x** "Linux Swap"
+```
+(parted) mkpart primary linux-swap **start** **end**
+(parted) name **x** "Linux Swap"
+```
 
-    # mkswap /dev/sda**x**
-    # swapon /dev/sda**x**
+```
+# mkswap /dev/sda**x**
+# swapon /dev/sda**x**
+```
 
 Mount the `root` partition to the `/mnt` directory:
 

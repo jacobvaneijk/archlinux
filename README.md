@@ -4,7 +4,7 @@ This document describes the installation procedure I've done to install Arch Lin
 
 The installation is divided in the following sections:
 
-* [Partitioning](#preparation)
+* [Partitioning](#partitioning)
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Post-installation](#post-installation)

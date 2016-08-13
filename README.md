@@ -1,6 +1,6 @@
 # My Arch Linux Installation
 
-This document describes the installation procedure I've done to install Arch Linux. The official [Installation guide]() or the [Beginners' guide ]() provide a more verbose description on most of the commands.
+This document describes the installation procedure I've done to install Arch Linux. The official [Installation guide](https://wiki.archlinux.org/index.php/Installation_guide) or the [Beginners' guide ](https://wiki.archlinux.org/index.php/Beginners%27_guide) provide a more verbose description on most of the commands.
 
 The installation is divided in the following sections:
 
@@ -80,9 +80,9 @@ Create the symbolic link `/etc/localtime`:
 
 Adjust the time skew and set the time standard to UTC:
 
-    # hwclock --systohc --utc
-
 > **Note:** This will make Windows display the time incorrectly, and must be configured accordingly. See [Time#UTC in Windows](https://wiki.archlinux.org/index.php/Time#UTC_in_Windows) for instructions.
+
+    # hwclock --systohc --utc
 
 Download and install the bootloader:
 

@@ -9,6 +9,8 @@ The installation is divided in the following sections:
 * [Configuration](#configuration)
 * [Post-installation](#post-installation)
 
+> **Note:** When creating a bootable USB drive, make sure the volume's label is similar to 'ARCH_201611' (where the numbers are based on the release date).
+
 <a name="partitioning"/>
 ## Partitioning
 

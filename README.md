@@ -14,28 +14,21 @@ The installation is divided in the following sections:
 <a name="partitioning"/>
 ## Partitioning
 
-Create the `root` partition:
+Make sure to use GiB as unit:
 
-```
-(parted) mkpart primary ext4 **start** **end**
-(parted) name **x** "Arch Linux"
-```
+    (parted) unit GiB
 
-```
-# mkfs.ext4 /dev/sda**x**
-```
+Create the `root` partition (about 20GiB):
 
-Create and activate the `swap` partition:
+    (parted) mkpart primary ext4 **start** **end**
+    (parted) name **x** "Arch Linux"
 
-```
-(parted) mkpart primary linux-swap **start** **end**
-(parted) name **x** "Linux Swap"
-```
+    # mkfs.ext4 /dev/sda**x**
 
-```
-# mkswap /dev/sda**x**
-# swapon /dev/sda**x**
-```
+Create the `home` partition (remaining size):
+
+    (parted) mkpart primary ext4 **start** **end**
+    (parted) name **x** "Home"
 
 Mount the `root` partition to the `/mnt` directory:
 

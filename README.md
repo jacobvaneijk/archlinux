@@ -46,9 +46,12 @@ Install the recommended minimum of packages:
 
     # pacstrap /mnt base base-devel
 
-Generate an `fstab` file:
+Create an `/etc/fstab` file::
 
-    # genfstab -U /mnt >> /mnt/etc/fstab
+    # <device> <dir>     <type> <options>                                                                                            <dump> <pass>
+    /dev/sda1  /boot/efi vfat   rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0      2
+    /dev/sda6  /         ext4   rw,relatime,data=ordered                                                                             0      1
+    /dev/sda7  /home     ext4   rw,relatime,data=ordered                                                                             0      2
 
 <a name="configuration"/>
 ## Configuration
